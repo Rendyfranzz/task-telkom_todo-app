@@ -7,8 +7,8 @@ const ListTodoComplete = ({todos,setTodos}) => {
     })
     
   return (
-    <div>
-        <span>Yang sudah dilakukan</span>
+    <div className='flex flex-col space-y-2 layout'>
+        <span className='m-auto font-semibold'>Yang sudah dilakukan</span>
           {
         filtered?.map((data)=>{
             return <CompleteCard key={data.id} data={data} all={todos} setTodos={setTodos}/>

@@ -1,15 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import UseTheme from '../theme/UseTheme';
 import { FaMoon, FaSun } from 'react-icons/fa'
 
 const Header = () => {
     const [nextTheme, setTheme] = UseTheme();
+    const [icon,setIcon] = useState(false)
     return (
-        <div className='sticky top-0 shadow-sm z-20 h-10'>
-            <nav className="flex items-center    justify-center transition-colors dark:bg-gray-800 dark:text-white">
-                <div className="w-full flex items-center align-baseline">
-                    <span className='font-bold'>Todo App</span>
-                    <button className='transition-all duration-300 p-2' onClick={(event) => {setTheme(nextTheme) }}>{nextTheme ? <FaSun size={20} /> : <FaMoon size={20} />
+        <div className='sticky top-0 z-20 h-10 shadow-sm'>
+            <nav className="flex items-center justify-center h-full p-4 transition-colors bg-light dark:bg-dark dark:text-gray-200">
+                <div className="flex items-center justify-between w-full align-baseline">
+                    <span className='text-2xl font-bold'>Todo App</span>
+                    <button className='p-2 transition-all duration-300' onClick={(event) => {setIcon(!icon); setTheme(nextTheme) }}>{icon ? <FaSun size={20} /> : <FaMoon size={20} />
                         }</button>
                 </div>
             </nav>

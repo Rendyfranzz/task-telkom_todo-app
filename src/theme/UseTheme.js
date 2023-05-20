@@ -2,7 +2,7 @@ import { useState,useEffect } from "react"
 
 
 const UseTheme = () => {
-    const [theme,setTheme] = useState("dark");
+    const [theme,setTheme] = useState("light");
     const nextTheme = theme === "dark" ? "light" :"dark";
     useEffect(()=>{
         

@@ -6,7 +6,8 @@ const ListTodo = ({ todos,setTodos }) => {
         return !data.isComplete
     })
     return (
-        <div>
+        <div className='flex flex-col space-y-2 layout'>
+             <span className='m-auto font-semibold'>Yang Belum dilakukan</span>
             {
                 filtered?.map((data) => {
                     return <UncompleteCard key={data.id} data={data} all={todos} setTodos={setTodos} />
