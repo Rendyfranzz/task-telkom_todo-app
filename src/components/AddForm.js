@@ -28,7 +28,7 @@ const AddForm = ({todos,setTodos}) => {
             </div>
 
             <div className='flex justify-center'>
-                    <input className='cursor-pointer' type='submit'/>
+                    <input className='cursor-pointer hover:scale-125 hover:transition-all' type='submit'/>
             </div>
         </form>
     <Container/>

@@ -38,10 +38,10 @@ const CompleteCard = ({ data, all, setTodos }) => {
                 </div>
                 <div className='-mb-4 space-x-4'>
                     <button onClick={(e) => openModal()}>
-                        <FaTrash />
+                        <FaTrash className='hover:scale-125 hover:transition-all' />
                     </button>
                     <button onClick={(e) => handleCompleteChange(data.id, all)}>
-                        <FaUndoAlt />
+                        <FaUndoAlt className='hover:scale-125 hover:transition-all' />
                     </button>
                 </div>
             </div>
